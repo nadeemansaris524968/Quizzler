@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oHC-Ok-oje">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="oT5-LK-YXL">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="oHC-Ok-oje" customClass="ViewController" customModule="Quizzler_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HCK-mx-Gzg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="UK2-CZ-he1" userLabel="Parent-Stack">
+                                <rect key="frame" x="20" y="64" width="374" height="788"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="TU2-Sr-NRB" userLabel="Question-Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="279.5"/>
+                                        <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lcb-Jr-uv2" userLabel="Button-Stack">
+                                        <rect key="frame" x="0.0" y="582" width="374" height="206"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rg1-zr-gzr">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="98"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdw-ds-NVR" userLabel="TrueBtn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                        <state key="normal" title="True">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2T-3b-M0M" userLabel="FalseBtn">
+                                                        <rect key="frame" x="0.0" y="54" width="374" height="44"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="False">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                                <variation key="heightClass=regular-widthClass=regular" axis="horizontal"/>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28z-Z3-Yvq">
+                                                <rect key="frame" x="0.0" y="108" width="374" height="98"/>
+                                                <subviews>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cdo-dE-phl">
+                                                        <rect key="frame" x="10" y="44" width="354" height="10"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="qId-k6-VUm"/>
+                                                        </constraints>
+                                                        <color key="progressTintColor" red="0.73725490199999999" green="0.39607843139999999" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="cdo-dE-phl" secondAttribute="trailing" constant="10" id="8Ev-k5-lPL"/>
+                                                    <constraint firstItem="cdo-dE-phl" firstAttribute="leading" secondItem="28z-Z3-Yvq" secondAttribute="leading" constant="10" id="Q5Y-Ud-pUk"/>
+                                                    <constraint firstItem="cdo-dE-phl" firstAttribute="centerY" secondItem="28z-Z3-Yvq" secondAttribute="centerY" id="VDa-4Y-wWz"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="xKz-mb-95P">
+                                <rect key="frame" x="0.0" y="794" width="414" height="102"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52266680510643793" green="0.36451546554254527" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UK2-CZ-he1" firstAttribute="top" secondItem="LPz-fO-Evg" secondAttribute="top" constant="20" id="J42-oh-Tpk"/>
+                            <constraint firstItem="UK2-CZ-he1" firstAttribute="trailing" secondItem="LPz-fO-Evg" secondAttribute="trailing" constant="-20" id="LBP-b7-kpE"/>
+                            <constraint firstItem="UK2-CZ-he1" firstAttribute="bottom" secondItem="LPz-fO-Evg" secondAttribute="bottom" constant="-10" id="VZ5-DJ-ab5"/>
+                            <constraint firstItem="xKz-mb-95P" firstAttribute="bottom" secondItem="HCK-mx-Gzg" secondAttribute="bottom" id="c8N-cc-M8i"/>
+                            <constraint firstItem="xKz-mb-95P" firstAttribute="leading" secondItem="HCK-mx-Gzg" secondAttribute="leading" id="d12-yE-1cw"/>
+                            <constraint firstItem="xKz-mb-95P" firstAttribute="trailing" secondItem="HCK-mx-Gzg" secondAttribute="trailing" id="vW4-sn-jdX"/>
+                            <constraint firstItem="UK2-CZ-he1" firstAttribute="leading" secondItem="LPz-fO-Evg" secondAttribute="leading" constant="20" id="zmm-23-l9w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LPz-fO-Evg"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PL2-98-Id6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="16" y="60"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background-Bubbles" width="352" height="102"/>
+    </resources>
 </document>
