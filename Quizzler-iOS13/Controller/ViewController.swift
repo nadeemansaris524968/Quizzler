@@ -11,23 +11,23 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var questionLbl: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet var answerBtns: [UIButton]!
+    @IBOutlet var choiceBtns: [UIButton]!
     @IBOutlet weak var scoreLbl: UILabel!
     
     var quizBrain = QuizBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        updateUI()
         styleButtons()
     }
     
     func styleButtons() {
-        for btn in answerBtns {
+        for btn in choiceBtns {
             btn.layer.cornerRadius = 5
             btn.layer.borderWidth = 1
             btn.layer.borderColor = UIColor.white.cgColor
@@ -35,7 +35,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func answerPressed(_ sender: UIButton) {
-        sender.setTitleColor(.black, for: .normal)
         guard let userAnswer = sender.titleLabel?.text else { return }
         let userGotItRight = quizBrain.checkAnswer(userAnswer)
         if userGotItRight {
@@ -49,9 +48,13 @@ class ViewController: UIViewController {
     
     func updateUI() {
         questionLbl.text = quizBrain.getQuestion()
+        let choices = quizBrain.getQuestionChoices()
+        for (index, choice) in choices.enumerated() {
+            choiceBtns[index].setTitle(choice, for: .normal)
+        }
         scoreLbl.text = "Score: \(quizBrain.getScore())/\(quizBrain.getQuizLength())"
         Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (Timer) in
-            for btn in self.answerBtns {
+            for btn in self.choiceBtns {
                 btn.setTitleColor(.white, for: .normal)
                 btn.backgroundColor = .clear
             }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oHC-Ok-oje">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -41,10 +41,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YU-N7-k9U" userLabel="Question-Container">
-                                        <rect key="frame" x="0.0" y="34" width="374" height="504"/>
+                                        <rect key="frame" x="0.0" y="34" width="374" height="364"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="TU2-Sr-NRB" userLabel="Question-Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="504"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="364"/>
                                                 <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,37 +60,51 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Lcb-Jr-uv2" userLabel="Bottom-Stack">
-                                        <rect key="frame" x="0.0" y="548" width="374" height="240"/>
+                                        <rect key="frame" x="0.0" y="408" width="374" height="380"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rg1-zr-gzr" userLabel="Button-Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="190"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdw-ds-NVR" userLabel="TrueBtn">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Sdw-ds-NVR" userLabel="Choice 1">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Fhu-Lc-uMt"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                                        <state key="normal" title="True">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Choice 1">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="answerPressed:" destination="oHC-Ok-oje" eventType="touchUpInside" id="nuY-p0-yXJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2T-3b-M0M" userLabel="FalseBtn">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="S2T-3b-M0M" userLabel="Choice 2">
                                                         <rect key="frame" x="0.0" y="70" width="374" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="A8D-mP-qGd"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                        <state key="normal" title="False">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Choice 2">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="answerPressed:" destination="oHC-Ok-oje" eventType="touchUpInside" id="Sat-yV-5Rd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="okf-fi-Z0Z" userLabel="Choice 3">
+                                                        <rect key="frame" x="0.0" y="140" width="374" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Gt2-lx-HjU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Choice 3">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="oHC-Ok-oje" eventType="touchUpInside" id="BVd-mh-qhX"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -100,10 +114,10 @@
                                                 <variation key="heightClass=regular-widthClass=regular" axis="horizontal"/>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28z-Z3-Yvq" userLabel="ProgressBar-Container">
-                                                <rect key="frame" x="0.0" y="120" width="374" height="120"/>
+                                                <rect key="frame" x="0.0" y="190" width="374" height="190"/>
                                                 <subviews>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cdo-dE-phl">
-                                                        <rect key="frame" x="10" y="55" width="354" height="10"/>
+                                                        <rect key="frame" x="10" y="90" width="354" height="10"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="10" id="qId-k6-VUm"/>
                                                         </constraints>
@@ -143,8 +157,9 @@
                         <outlet property="progressBar" destination="cdo-dE-phl" id="SBc-fl-qzP"/>
                         <outlet property="questionLbl" destination="TU2-Sr-NRB" id="mmM-Fr-1pc"/>
                         <outlet property="scoreLbl" destination="O3h-xQ-5Kp" id="2dR-LE-gP4"/>
-                        <outletCollection property="answerBtns" destination="Sdw-ds-NVR" collectionClass="NSMutableArray" id="8wS-kY-Gd0"/>
-                        <outletCollection property="answerBtns" destination="S2T-3b-M0M" collectionClass="NSMutableArray" id="PsZ-it-tTR"/>
+                        <outletCollection property="choiceBtns" destination="Sdw-ds-NVR" collectionClass="NSMutableArray" id="8wS-kY-Gd0"/>
+                        <outletCollection property="choiceBtns" destination="S2T-3b-M0M" collectionClass="NSMutableArray" id="PsZ-it-tTR"/>
+                        <outletCollection property="choiceBtns" destination="okf-fi-Z0Z" collectionClass="NSMutableArray" id="on8-Jq-haC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PL2-98-Id6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
